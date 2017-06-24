@@ -1,0 +1,16 @@
+<div style="cursor: pointer;" class="rightquestion" onclick="Rokenhoofdvraag0()">
+  <span class="dutch">
+    Moet ik stoppen met roken?
+  </span>
+  <span class="english">
+    Should I quit smoking?
+  </span>
+</div>
+<div style="cursor: pointer;" class="rightquestion" onclick="Rokenhoofdvraag1()">
+  <span class="dutch">
+    Hoe lang duurt stoppen met Roken?
+  </span>
+  <span class="english">
+    How long does quiting take?
+  </span>
+</div>

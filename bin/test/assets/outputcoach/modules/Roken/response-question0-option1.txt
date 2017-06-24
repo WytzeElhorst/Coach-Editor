@@ -1,0 +1,8 @@
+<div class="modulelinks">
+  <span class="dutch">
+    Probeer toch maar.
+  </span>
+  <span class="english">
+    You should try to.
+  </span>
+</div>

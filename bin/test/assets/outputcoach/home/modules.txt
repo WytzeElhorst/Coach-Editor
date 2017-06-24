@@ -1,0 +1,9 @@
+<div style="cursor: pointer;" class="module"  onclick=loadRokenModule()>
+  <img src="images/imgRoken.png"></img>
+  <span class="dutch">
+    Roken
+  </span>
+  <span class="english">
+    Smoking
+  </span>
+</div>

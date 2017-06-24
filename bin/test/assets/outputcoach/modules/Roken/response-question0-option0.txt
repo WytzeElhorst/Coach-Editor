@@ -1,0 +1,8 @@
+<div class="modulelinks">
+  <span class="dutch">
+    Goed zo.
+  </span>
+  <span class="english">
+    Nice one.
+  </span>
+</div>

@@ -1,0 +1,26 @@
+<div class="modulelinks">
+  <span class="dutch">
+    Ga je stoppen met roken?
+  </span>
+  <span class="english">
+    Will you quit smoking?
+  </span>
+</div>
+<div class="modulerechts">
+<span style="cursor: pointer;" class="basicbuttons" onclick="Rokenvraag0option0()">
+  <span class="dutch">
+    Ja
+  </span>
+  <span class="english">
+    Yes
+  </span>
+</span>
+<span style="cursor: pointer;" class="basicbuttons" onclick="Rokenvraag0option1()">
+  <span class="dutch">
+    Nee
+  </span>
+  <span class="english">
+    No
+  </span>
+</span>
+</div>

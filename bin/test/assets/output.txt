@@ -1,0 +1,195 @@
+<core>
+<module>
+<moduleimagesrc>
+C:/Users/Example/image.png
+</moduleimagesrc>
+<moduletitle>
+<dutch>
+Roken
+</dutch>
+<english>
+Smoking
+</english>
+</moduletitle>
+<leftsidequestion>
+<index>
+0
+</index>
+<question>
+<dutch>
+Ga je stoppen met roken?
+</dutch>
+<english>
+Will you quit smoking?
+</english>
+</question>
+<answer>
+<value>
+<dutch>
+Ja
+</dutch>
+<english>
+Yes
+</english>
+</value>
+<respons>
+<dutch>
+Goed zo.
+</dutch>
+<english>
+Nice one.
+</english>
+</respons>
+<nextquestionindex>
+2
+</nextquestionindex>
+</answer>
+<answer>
+<value>
+<dutch>
+Nee
+</dutch>
+<english>
+No
+</english>
+</value>
+<respons>
+<dutch>
+Probeer toch maar.
+</dutch>
+<english>
+You should try to.
+</english>
+</respons>
+<nextquestionindex>
+1
+</nextquestionindex>
+</answer>
+</leftsidequestion>
+<leftsidequestion>
+<index>
+1
+</index>
+<question>
+<dutch>
+Klik op de knop om terug te gaan naar het hoofdscherm.
+</dutch>
+<english>
+Click on the button to return to the homescreen.
+</english>
+</question>
+<answer>
+<value>
+<dutch>
+Terug.
+</dutch>
+<english>
+Back.
+</english>
+</value>
+<respons>
+<dutch>
+Stilte?
+</dutch>
+<english>
+Stilte? Dit kan evt ook leeg. Nextquestionindex van -1 betekent: terug naar home.
+</english>
+</respons>
+<nextquestionindex>
+-1
+</nextquestionindex>
+</answer>
+</leftsidequestion>
+<leftsidequestion>
+<index>
+2
+</index>
+<question>
+<dutch>
+Rookt u nu nog?
+</dutch>
+<english>
+
+</english>
+</question>
+<answer>
+<value>
+<dutch>
+Ja
+</dutch>
+<english>
+Ja
+</english>
+</value>
+<respons>
+<dutch>
+Probeer dit dan geleidelijk af te nemen.
+</dutch>
+<english>
+Probeer dit dan geleidelijk af te nemen.
+</english>
+</respons>
+<nextquestionindex>
+1
+</nextquestionindex>
+</answer>
+<answer>
+<value>
+<dutch>
+Nee
+</dutch>
+<english>
+Nee
+</english>
+</value>
+<respons>
+<dutch>
+Lekker bezig! Ga zo door!
+</dutch>
+<english>
+Lekker bezig! Ga zo door!
+</english>
+</respons>
+<nextquestionindex>
+1
+</nextquestionindex>
+</answer>
+</leftsidequestion>
+<rightsidequestion>
+<question>
+<dutch>
+Moet ik stoppen met roken?
+</dutch>
+<english>
+Should I quit smoking?
+</english>
+</question>
+<respons>
+<dutch>
+Ja.
+</dutch>
+<english>
+Yes.
+</english>
+</respons>
+</rightsidequestion>
+<rightsidequestion>
+<question>
+<dutch>
+Hoe lang duurt stoppen met Roken?
+</dutch>
+<english>
+How long does quiting take?
+</english>
+</question>
+<respons>
+<dutch>
+Dat hangt heel erg af aan de persoon, maar gemiddeld
+</dutch>
+<english>
+<english>
+</english>
+</respons>
+</rightsidequestion>
+</module>
+</core>
