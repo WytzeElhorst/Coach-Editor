@@ -1,0 +1,8 @@
+<div class="modulelinks">
+  <span class="dutch">
+    Stilte?
+  </span>
+  <span class="english">
+    Stilte? Dit kan evt ook leeg. Nextquestionindex van -1 betekent: terug naar home.
+  </span>
+</div>

@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="Text/HTML; charset=utf-8" />
+	<title>Virtuele Coach</title>
+	<link rel="stylesheet" type="text/css" href="coachstyle.css">
+	<script src="TemplateData/UnityProgress.js"></script>
+	<script src="TemplateData/textToSpeech.js"></script>
+	<script src="Build/UnityLoader.js"></script>
+	<script>
+		var Coach = UnityLoader.instantiate("gameContainerId", "Build/coach.json");
+	</script>
+</head>
+
+<body>
+	<header></header>
+	<div class="core">
+		<div class="rightside">
+			<div id="gameContainerId" style="width: 500px; height: 500px;">
+				<!-- this is where the coach is -->
+			</div>
+			<div class="controlpanel">
+				<input class="controlbuttons" type="button" onclick=stopTalk() value="Stop met praten">
+				<input class="controlbuttons" type="button" onclick=changeBackground() value="Verander Achtergrond" />
+				<input class="controlbuttons" type="button" onclick=changeCoach() value="Verander Persoon" />
+			</div>
+			<div id="rightsideQuestions">
+
+			</div>
+		</div>
+		<div id="modulecontainer">
+
+		</div>
+
+	</div>
+	<!-- core -->
+	<script>
+		var performedanswers = new Array();
+		var currentLanguage = "dutch";
+		/* general <functions></functions>*/
+		function sleep(time) {
+			return new Promise((resolve) => setTimeout(resolve, time));
+		}
+
+		function stopTalk() {
+			Coach.SendMessage('TalkingCoach', 'stopSpeach');
+		}
+
+		function changeBackground() {
+			Coach.SendMessage('TalkingCoach', 'changeBackround');
+		}
+
+		function changeCoach() {
+			Coach.SendMessage('TalkingCoach', 'changeCoach');
+		}
+		/* end of general functions */
+function language0() {
+currentLanguage = "dutch";
+			var elemsdutch = document.getElementsByClassName("dutch");
+			var elemsenglish = document.getElementsByClassName("english");
+			for (var i = 0; i < elemsdutch.length; i++) {
+				elemsenglish[i].style.display = "none";
+				elemsdutch[i].style.display = "inline-block";
+			}
+		}
+function language1() {
+currentLanguage = "english";
+			var elemsdutch = document.getElementsByClassName("dutch");
+			var elemsenglish = document.getElementsByClassName("english");
+			for (var i = 0; i < elemsdutch.length; i++) {
+				elemsdutch[i].style.display = "none";
+				elemsenglish[i].style.display = "inline-block";
+			}
+		}
+function displayCurrentLanguage(){
+switch (currentLanguage) {
+				case "dutch":
+					language0();
+					break;
+				case "english":
+					language1();
+					break;
+	}
+}
+function speak(q){
+switch (currentLanguage) {
+				case "dutch":
+					Coach.SendMessage('TalkingCoach', 'convertToSpeach', q[0]);
+					break;
+				case "english":
+					Coach.SendMessage('TalkingCoach', 'convertToSpeach', q[1]);
+					break;
+	}
+}
+function loadHomeScreen() {
+			performedanswers = new Array();
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("modulecontainer").innerHTML = this.responseText;
+			displayCurrentLanguage();
+				}
+			};
+			xhttp.open("GET", "home/modules.txt", true);
+			xhttp.send();
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("rightsideQuestions").innerHTML = this.responseText;
+			displayCurrentLanguage();
+				}
+			};
+			xhttp.open("GET", "home/languages.txt", true);
+			xhttp.send();
+		}
+function loadRokenModule() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("modulecontainer").innerHTML = this.responseText;
+			displayCurrentLanguage();
+				}
+			};
+			xhttp.open("GET", "modules/Roken/question0.txt", true);
+			xhttp.send();
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("rightsideQuestions").innerHTML = this.responseText;
+			displayCurrentLanguage();
+				}
+			};
+			xhttp.open("GET", "modules/Roken/questions.txt", true);
+			xhttp.send();
+			speak(["Ga je stoppen met roken?", "Will you quit smoking?"]);
+		}		function Rokenhoofdvraag0() {
+		speak(["Ja.", "Yes."])
+		};
+		function Rokenhoofdvraag1() {
+		speak(["Dat hangt heel erg af aan de persoon, maar gemiddeld", "it depends"])
+		};
+function Rokenvraag0() {
+			sleep(1000).then(() => {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("modulecontainer").innerHTML += this.responseText;
+			displayCurrentLanguage();
+					}
+				};
+				xhttp.open("GET", "modules/Roken/question0.txt", true);
+				xhttp.send();
+				speak(["Ga je stoppen met roken?", "Will you quit smoking?"]);
+			})
+		}
+function Rokenvraag1() {
+			sleep(1000).then(() => {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("modulecontainer").innerHTML += this.responseText;
+			displayCurrentLanguage();
+					}
+				};
+				xhttp.open("GET", "modules/Roken/question1.txt", true);
+				xhttp.send();
+				speak(["Klik op de knop om terug te gaan naar het hoofdscherm.", "Click on the button to return to the homescreen."]);
+			})
+		}
+function Rokenvraag2() {
+			sleep(1000).then(() => {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("modulecontainer").innerHTML += this.responseText;
+			displayCurrentLanguage();
+					}
+				};
+				xhttp.open("GET", "modules/Roken/question2.txt", true);
+				xhttp.send();
+				speak(["Rookt u nu nog?", ""]);
+			})
+		}
+function Rokenvraag0option0() {
+			if (performedanswers.indexOf("q0o0") != -1) {
+				return;
+			}
+			performedanswers.push("q0o0");
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("modulecontainer").innerHTML += this.responseText;
+			displayCurrentLanguage();
+				}
+			};
+			xhttp.open("GET", "modules/Roken/response-question0-option0.txt", true);
+			xhttp.send();
+				speak(["Goed zo.", "Nice one."]);
+			Rokenvraag2()
+		};
+function Rokenvraag0option1() {
+			if (performedanswers.indexOf("q0o1") != -1) {
+				return;
+			}
+			performedanswers.push("q0o1");
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("modulecontainer").innerHTML += this.responseText;
+			displayCurrentLanguage();
+				}
+			};
+			xhttp.open("GET", "modules/Roken/response-question0-option1.txt", true);
+			xhttp.send();
+				speak(["Probeer toch maar.", "You should try to."]);
+			Rokenvraag1()
+		};
+function Rokenvraag1option0() {
+			if (performedanswers.indexOf("q1o0") != -1) {
+				return;
+			}
+			performedanswers.push("q1o0");
+			loadHomeScreen()
+		};
+function Rokenvraag2option0() {
+			if (performedanswers.indexOf("q2o0") != -1) {
+				return;
+			}
+			performedanswers.push("q2o0");
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("modulecontainer").innerHTML += this.responseText;
+			displayCurrentLanguage();
+				}
+			};
+			xhttp.open("GET", "modules/Roken/response-question2-option0.txt", true);
+			xhttp.send();
+				speak(["Probeer dit dan geleidelijk af te nemen.", "Probeer dit dan geleidelijk af te nemen."]);
+			Rokenvraag1()
+		};
+function Rokenvraag2option1() {
+			if (performedanswers.indexOf("q2o1") != -1) {
+				return;
+			}
+			performedanswers.push("q2o1");
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("modulecontainer").innerHTML += this.responseText;
+			displayCurrentLanguage();
+				}
+			};
+			xhttp.open("GET", "modules/Roken/response-question2-option1.txt", true);
+			xhttp.send();
+				speak(["Lekker bezig! Ga zo door!", "Lekker bezig! Ga zo door!"]);
+			Rokenvraag1()
+		};
+
+		window.onload = loadHomeScreen();
+			displayCurrentLanguage();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+body {
+	background-color: 	#E6F5F8;
+	font-family: Arial;
+}
+.core {
+	width: 1260px;
+	height: 900px;
+	background-color: #E6F5F8;
+	margin-left: auto;
+	margin-right:auto;
+	overflow: hidden;
+}
+#modulecontainer {
+	border: 2px #017CC2 solid;
+	width: 740px;
+	float:left;
+	max-height: 800px;
+	overflow-y: auto;
+}
+
+.basicbuttons:disabled, .basicbuttons[disabled],.basicbuttons:hover, .basicbuttons[hover] {
+	color: black;
+	background-color:#017CC2;
+}
+.basicbuttons {
+	background-color: #E6F5F8;
+	border: 1px #017CC2 solid;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: bold;
+	display: inline-block;
+	font-size: 16px;
+	margin: 5px;
+	cursor: pointer;
+
+}
+.controlbuttons:hover, .controlbuttons[hover] {
+	color: white;
+	background-color: #333333;
+}
+.controlbuttons {
+	background-color: grey;
+	border: 1px #017CC2 solid;
+	padding: 5px;
+	text-align: center;
+	display: inline-block;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.modulelinks {
+	margin: 5px;
+		border: 1px #017CC2 solid;
+		background-color:#80CBDE;
+		width: 60%;
+		text-align: left;
+		float:left;
+}
+.modulerechts {
+	margin: 5px;
+	border: 1px #017CC2 solid;
+	background-color: #E6F5F8;
+	width: 60%;
+	text-align:right;
+	float: right;
+}
+.module:hover, .module[hover] {
+	background-color: #017CC2;
+}
+.module {
+	padding: 10px;
+	margin: 5px;
+	border: 5px #017CC2 solid;
+	background-color: #80CBDE;
+	width:315px;
+	height:180px;
+	float:left;
+}
+
+#gamecContainerId {
+	width: 500px;
+	height: 500px;
+}
+
+.controlpanel {
+	padding: 5px;
+	border: 2px #017CC2 solid;
+	margin: 5px;
+
+}
+.rightquestion:hover, .rightquestion[hover] {
+	background-color: #017CC2;
+}
+.rightquestion {
+	padding: 5px;
+	border: 2px #017CC2 solid;
+	margin: 5px;
+}
+
+.rightside {
+	width: 500px;
+	float:right;
+	border: 2px #017CC2 solid;
+
+}
+
+img {
+	max-height:100%;
+	max-width:60%;
+	width: auto;
+	vertical-align: middle;
+}

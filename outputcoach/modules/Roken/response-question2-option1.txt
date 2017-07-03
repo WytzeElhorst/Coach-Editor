@@ -1,0 +1,8 @@
+<div class="modulelinks">
+  <span class="dutch">
+    Lekker bezig! Ga zo door!
+  </span>
+  <span class="english">
+    Lekker bezig! Ga zo door!
+  </span>
+</div>

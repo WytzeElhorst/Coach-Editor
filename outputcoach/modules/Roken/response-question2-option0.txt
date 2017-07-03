@@ -1,0 +1,8 @@
+<div class="modulelinks">
+  <span class="dutch">
+    Probeer dit dan geleidelijk af te nemen.
+  </span>
+  <span class="english">
+    Probeer dit dan geleidelijk af te nemen.
+  </span>
+</div>
