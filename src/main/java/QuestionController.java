@@ -136,6 +136,7 @@ public class QuestionController {
 
 			@Override
 			public void keyPressed(KeyEvent e) {
+				
 				if (wc.curquest != null) {
 					wc.curquest.getBody().set(wc.curlang, Window.textArea.getText() + e.getKeyChar());
 				}

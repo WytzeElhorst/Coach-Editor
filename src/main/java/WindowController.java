@@ -163,10 +163,10 @@ public class WindowController {
 			} else if(currentLine.contains("<leftsidequestion>")){
 				curmod.addQuestion(Question.Read(sc));
 			} else if(currentLine.contains("<rightsidequestion>")){
-
 				curmod.addGeneralQuestion(GQuestion.Read(sc));
 			}
 		}
+		System.out.println(curmod.getQuestions().size());
 		for (int i = 0; i < curmod.getQuestions().size(); i++) {
 			Question q = curmod.getQuestions().get(i);
 			for (int k = 0; k < q.getOptions().size(); k++) {

@@ -126,6 +126,9 @@ public class Option {
 		for (int l = 0; l < languages.size(); l++) {
 			out.write("<" + languages.get(l).getName() + ">");
 			out.newLine();
+			if (this.getChoice().get(l) == "") {
+				this.getChoice().set(l, "inc");
+			}
 			out.write(this.getChoice().get(l));
 			out.newLine();
 			out.write("</" + languages.get(l).getName() + ">");
@@ -138,6 +141,9 @@ public class Option {
 		for (int l = 0; l < languages.size(); l++) {
 			out.write("<" + languages.get(l).getName() + ">");
 			out.newLine();
+			if (this.getResponse().get(l) == "") {
+				this.getResponse().set(l, "inc");
+			}
 			out.write(this.getResponse().get(l));
 			out.newLine();
 			out.write("</" + languages.get(l).getName() + ">");

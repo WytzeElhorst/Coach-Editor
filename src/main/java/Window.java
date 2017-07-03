@@ -137,6 +137,18 @@ public class Window {
 		loadBox.addItem("Load or Save");
 		loadBox.addItem("Load");
 		loadBox.addItem("Save");
+		
+		textArea.setLineWrap(true);
+		textArea.setWrapStyleWord(true);
+		textArea.getDocument().putProperty("filterNewlines", Boolean.TRUE);
+		
+		textArea_1.setLineWrap(true);
+		textArea_1.setWrapStyleWord(true);
+		textArea_1.getDocument().putProperty("filterNewlines", Boolean.TRUE);
+		
+		txtrAnswer.setLineWrap(true);
+		txtrAnswer.setWrapStyleWord(true);
+		txtrAnswer.getDocument().putProperty("filterNewlines", Boolean.TRUE);
 
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));

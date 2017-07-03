@@ -99,6 +99,9 @@ public class Question {
 		for (int l = 0; l < languages.size(); l++) {
 			out.write("<" + languages.get(l).getName() + ">");
 			out.newLine();
+			if (this.getBody().get(l) == "") {
+				this.getBody().set(l, "inc");
+			}
 			out.write(this.getBody().get(l));
 			out.newLine();
 			out.write("</" + languages.get(l).getName() + ">");
